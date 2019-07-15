@@ -17,6 +17,8 @@ function initLunr() {
             // Set up lunrjs by declaring the fields we use
             // Also provide their boost level for the ranking
             lunrIndex = lunr(function() {
+                // use the language (ja)
+                this.use(lunr.ja);
                 this.ref("uri");
                 this.field('title', {
 		    boost: 15
